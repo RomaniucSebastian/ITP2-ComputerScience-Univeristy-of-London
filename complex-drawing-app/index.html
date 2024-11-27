@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Drawing App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+    <div id="toolbar">
+        <img src="assets/logo.png" alt="App Logo" id="logo">
+        <button onclick="setTool('freehand')"><img src="assets/freehand.png" alt="Freehand"></button>
+        <button onclick="setTool('line')"><img src="assets/lineTo.png" alt="Line"></button>
+        <button onclick="setTool('rectangle')"><img src="assets/rectangle.png" alt="Rectangle"></button>
+        <button onclick="setTool('ellipse')"><img src="assets/ellipse.png" alt="Ellipse"></button>
+        <button onclick="setTool('sprayCan')"><img src="assets/sprayCan.png" alt="Spray Can"></button>
+        <button onclick="setTool('mirrorDraw')"><img src="assets/mirrorDraw.png" alt="Mirror Draw"></button>
+        <button onclick="setTool('stamp')"><img src="assets/stampTool.png" alt="Stamp"></button>
+        <button onclick="setTool('scissor')"><img src="assets/scissorTool.png" alt="Scissor"></button>
+        <button onclick="setTool('image')"><img src="assets/imageTool.png" alt="Image"></button>
+        <input type="color" id="colorPicker" onchange="setColor(this.value)">
+    </div>
+    
+    <div id="canvasContainer">
+        <script src="lib/p5.min.js"></script>
+        <script src="js/helperFunctions.js"></script>
+        <script src="js/toolbox.js"></script>
+        <script src="js/tools/baseTool.js"></script>
+        <script src="js/tools/freehandTool.js"></script>
+        <script src="js/tools/lineToTool.js"></script>
+        <script src="js/tools/rectangleTool.js"></script>
+        <script src="js/tools/ellipseTool.js"></script>
+        <script src="js/tools/sprayCanTool.js"></script>
+        <script src="js/tools/mirrorDrawTool.js"></script>
+        <script src="js/tools/stampTool.js"></script>
+        <script src="js/tools/scissorTool.js"></script>
+        <script src="js/tools/imageTool.js"></script>
+        <script src="js/sketch.js"></script>
+    </div>
+</body>
+</html>
